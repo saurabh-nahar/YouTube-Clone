@@ -23,11 +23,10 @@ const VideoCard = ({data}) => {
   (
     <div className='m-2 p-2 w-96'>
         <ul>
-            <img className='rounded-lg w-auto object-center' src={thumbnails.medium.url} alt="thumbnail" ></img>
+            <img className='rounded-lg w-auto object' src={thumbnails.medium.url} alt="thumbnail" ></img>
             <li className='font-semibold truncate w-80'>{title}</li>
             <li className='font-medium truncate text-gray-600'>{channelTitle}</li>
             <li className='font-medium truncate text-gray-600'>{Number(viewCount).toLocaleString()} views</li>
-
         </ul>
     </div>
   )
