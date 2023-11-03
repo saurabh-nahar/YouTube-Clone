@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { videoApi } from '../constants/videoApi';
 import VideoCard from './VideoCard'
 
@@ -20,7 +21,7 @@ const VideoContainer = () => {
 
   return (
     <div className = "flex flex-wrap w-100%">
-      {videoData.map((singleCard)=> <VideoCard key={singleCard.key} data = {singleCard}/>)}
+      {videoData.map((singleCard)=> <Link to = {"/watch?v=" + singleCard.id}><VideoCard key={singleCard.key} data = {singleCard}/></Link>)}
     </div>
   )
 }

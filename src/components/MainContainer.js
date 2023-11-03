@@ -3,7 +3,7 @@ import VideoContainer from './VideoContainer'
 
 const MainContainer = () => {
     return(
-        <div className="flex-1 mx-2">
+        <div className="flex-1  flex-grow mx-2"> 
             <ButtonList/>
             <VideoContainer/>
         </div>
@@ -11,3 +11,5 @@ const MainContainer = () => {
 }
 
 export default MainContainer;
+
+// (add flex-grow to class since removed from body)
