@@ -8,10 +8,12 @@ const Body = () => {
 
   return (
     <div className='flex'>
-      <Sidebar/>
-      <Outlet/>
+      <Sidebar />
+      <div className="flex-1 flex-grow mx-2">
+        <Outlet />
+      </div>
     </div>
-  )
+  );  
 }
 
 export default Body

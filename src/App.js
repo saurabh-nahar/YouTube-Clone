@@ -6,6 +6,7 @@ import appStore from './utils/appStore';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainContainer from './components/VideoContainer';
 import WatchPage from './components/WatchPage';
+import ButtonList from './components/ButtonList'
 
 const appRouter = createBrowserRouter([
   {

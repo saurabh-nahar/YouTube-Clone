@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { menuToggle } from '../utils/sideMenuSlice';
 import {searchApi} from '../constants/searchApi'
+import { createCache } from '../utils/searchSlice';
 
 
 const Header = () => {
@@ -10,12 +11,21 @@ const Header = () => {
   
   const dispatch = useDispatch()
 
+  const cache = useSelector((store) => store.search)
+
   const clickHandler = () => {
     dispatch(menuToggle())
   }
 
   useEffect(() => {
-    const timer = setTimeout(() => searchFn(), 200)
+
+    const timer = setTimeout(() => {
+    if(cache[searchText]){
+      setSearchRes(cache[searchText])
+    }else{
+      searchFn()
+    }
+  }, 200)
 
     return () => clearTimeout(timer);
   }, [searchText])
@@ -27,6 +37,7 @@ const Header = () => {
     console.log(json[1]);
 
     setSearchRes(json[1])
+    dispatch(createCache({[searchText]: json[1]}))
   }
 
   return (
@@ -46,7 +57,7 @@ const Header = () => {
     </div>
     <div className='text-center'>
       <ul>
-        {searchRes.map((res) => <li>{res}</li>)}
+      {searchRes.map((res, index) => <li key={index}>{res}</li>)}
       </ul>
     </div>
     </div>
@@ -54,3 +65,5 @@ const Header = () => {
 };
 
 export default Header;
+
+
