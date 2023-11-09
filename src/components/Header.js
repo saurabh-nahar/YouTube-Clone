@@ -34,7 +34,6 @@ const Header = () => {
     const data = await fetch(searchApi + searchText)
     const json = await data.json();
 
-    console.log(json[1]);
 
     setSearchRes(json[1])
     dispatch(createCache({[searchText]: json[1]}))
@@ -65,5 +64,4 @@ const Header = () => {
 };
 
 export default Header;
-
 

@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 
 
 const VideoCard = ({data}) => {
-    console.log(data);
     const {title, channelTitle, thumbnails} = data.snippet;
     const {viewCount} = data.statistics
 

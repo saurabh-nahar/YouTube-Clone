@@ -4,9 +4,9 @@ function Comment({cdata}) {
     const {name, comment} = cdata;
 
   return (
-    <div className='m-2 p-2 flex bg-gray-200 rounded-lg w-2/3'>
+    <div className='m-2 p-2 flex bg-gray-200 rounded-lg w-2/3 items-center'>
         <div>
-        <i className="fa-solid fa-circle-user text-3xl pr-2"></i>
+        <i className="fa-solid fa-circle-user text-4xl pr-2"></i>
         </div>
         <div>
         <p className='font-semibold'>{name}</p>

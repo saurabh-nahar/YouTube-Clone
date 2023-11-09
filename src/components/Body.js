@@ -7,7 +7,7 @@ import Sidebar from './Sidebar'
 const Body = () => {
 
   return (
-    <div className='flex'>
+    <div className='flex pt-2'>
       <Sidebar />
       <div className="flex-1 flex-grow mx-2">
         <Outlet />
