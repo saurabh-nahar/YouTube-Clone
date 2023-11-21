@@ -1,0 +1,1 @@
+export const SEARCH_BY_ID = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&key=${process.env.REACT_APP_YOUTUBE_API_KEY}&id=`
