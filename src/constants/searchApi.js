@@ -1,1 +1,1 @@
-export const searchApi = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="
+export const searchApi = "https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="

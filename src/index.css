@@ -9,3 +9,44 @@
 body {
     overflow-x: hidden;
   }
+
+  /* Add this CSS for smaller screens */
+@media (max-width: 767px) {
+    .live-chat-section {
+      display: none;
+    }
+  }
+  
+  /* Add this CSS for smaller screens */
+/* Add this CSS for smaller screens */
+@media (max-width: 767px) {
+  .video-container {
+    width: 100%;
+  }
+
+  .live-chat-section {
+    width: 100%;
+    margin: 0; /* Adjust margins as needed */
+  }
+
+  .video-details,
+  .comments-container {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+  }
+
+  .font-size-sm {
+    font-size: 14px;
+  }
+}
+
+/* Hide live chat form on smaller screens */
+@media (max-width: 767px) {
+  .live-chat-form {
+    display: none;
+  }
+}
+
+  
+  
+  
